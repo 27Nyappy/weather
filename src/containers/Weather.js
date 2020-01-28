@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import WeatherForm from '../components/WeatherForm';
 import getWeather from '../services/WeatherApi';
+import WeatherList from '../components/WeatherList';
 
 const Weather = () => {
   const [zip, updateZip] = useState('');
@@ -12,14 +13,16 @@ const Weather = () => {
     getWeather(days, zip)
       .then(res => updateWeatherInfo(res));
   };
-  console.log(weatherInfo);
 
   const handleDayChange = ({ target }) => updateDays(target.value);
 
   const handleZipChange = ({ target }) => updateZip(target.value);
 
   return (
-    <WeatherForm handleSubmit={handleSubmit} handleDayChange={handleDayChange} handleZipChange={handleZipChange} />
+    <>
+      <WeatherForm handleSubmit={handleSubmit} handleDayChange={handleDayChange} handleZipChange={handleZipChange} />
+      {weatherInfo !== undefined ? <WeatherList weatherItems={weatherInfo}/> : <></>}
+    </>
   );
 };
 

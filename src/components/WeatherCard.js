@@ -6,8 +6,10 @@ const WeatherCard = ({ mainTemp, feelsLike, maxTemp, minTemp, humidity, detail, 
     <>
       <h2>{city}</h2>
       <p>{date}</p>
-      <span>{mainTemp}&#176;</span>
-      <img src={icon} alt="Weather Icon" />
+      <div>
+        <span>{mainTemp}&#176;</span>
+        <img src={icon} alt="Weather Icon" />
+      </div>
       <p>{maxTemp}&#176;/{minTemp}&#176; Feels like {feelsLike}&#176;</p>
       <p>{detail}, {description} and {humidity}% humidity</p>
     </>
