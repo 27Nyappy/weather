@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Weather Card Component Renders Weather Card 1`] = `
+<Fragment>
+  <h2>
+    Portland
+  </h2>
+  <p>
+    Mon Jan 27 2020 22:57:33 GMT-0800 (Pacific Standard Time)
+  </p>
+  <div>
+    <span>
+      50.13
+      °
+    </span>
+    <img
+      alt="Weather Icon"
+      src="http://openweathermap.org/img/wn/10n@2x.png"
+    />
+  </div>
+  <p>
+    53.6
+    °/
+    46
+    ° Feels like 
+    43.68
+    °
+  </p>
+  <p>
+    Rain
+    , 
+    moderate rain
+     and 
+    81
+    % humidity
+  </p>
+</Fragment>
+`;
