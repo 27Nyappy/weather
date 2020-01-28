@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Weather Form Component Renders Weather Form 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    max="99950"
+    min="00501"
+    onChange={[Function]}
+    required={true}
+    type="number"
+  />
+  <input
+    id="current-weather"
+    name="day-options"
+    onChange={[Function]}
+    required={true}
+    type="radio"
+    value="weather"
+  />
+  <label
+    htmlFor="current-weather"
+  >
+    Current Weather
+  </label>
+  <input
+    id="five-day-weather"
+    name="day-options"
+    onChange={[Function]}
+    required={true}
+    type="radio"
+    value="forecast"
+  />
+  <label
+    htmlFor="five-day-weather"
+  >
+    Five Day Forecast
+  </label>
+  <input
+    type="submit"
+    value="Get Weather"
+  />
+</form>
+`;
