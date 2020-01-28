@@ -12,6 +12,7 @@ const Weather = () => {
     getWeather(days, zip)
       .then(res => updateWeatherInfo(res));
   };
+  console.log(weatherInfo);
 
   const handleDayChange = ({ target }) => updateDays(target.value);
 

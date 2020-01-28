@@ -10,7 +10,7 @@ export default function getWeather(time, code) {
         .then(res => {
           const date = Date(res.data.dt);
           const weatherObjDay = {
-            main: res.data.main.temp,
+            mainTemp: res.data.main.temp,
             feelsLike: res.data.main.feels_like,
             maxTemp: res.data.main.temp_max,
             minTemp: res.data.main.temp_min,
@@ -32,7 +32,7 @@ export default function getWeather(time, code) {
           return res.data.list.map(({ main, weather, dt_txt }) => {
             const dates = new Date(`${dt_txt}`).toString();
             const weatherObjDays = {
-              main: main.temp,
+              mainTemp: main.temp,
               feelsLike: main.feels_like,
               maxTemp: main.temp_max,
               minTemp: main.temp_min,
