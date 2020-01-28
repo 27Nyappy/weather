@@ -7,11 +7,18 @@ const Weather = () => {
   const [zip, updateZip] = useState('');
   const [days, updateDays] = useState('');
   const [weatherInfo, updateWeatherInfo] = useState([]);
+  const [err, updateErr] = useState(false);
 
   const handleSubmit = event => {
     event.preventDefault();
+    {err ? updateErr(false) : err;}
     getWeather(days, zip)
-      .then(res => updateWeatherInfo(res));
+      .then(res => updateWeatherInfo(res))
+      .catch(error => {
+        // eslint-disable-next-line no-console
+        console.log(error);
+        updateErr(true);
+      });
   };
 
   const handleDayChange = ({ target }) => updateDays(target.value);
@@ -22,6 +29,7 @@ const Weather = () => {
     <>
       <WeatherForm handleSubmit={handleSubmit} handleDayChange={handleDayChange} handleZipChange={handleZipChange} />
       {weatherInfo !== undefined ? <WeatherList weatherItems={weatherInfo}/> : <></>}
+      {err ? <h2>PLEASE ENTER A VALID ZIP CODE</h2> : <></>}
     </>
   );
 };
