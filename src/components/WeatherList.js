@@ -4,7 +4,6 @@ import WeatherCard from './WeatherCard';
 
 const WeatherList = ({ weatherItems }) => {
   let weatherLists = weatherItems;
-  console.log(weatherItems);
   if(weatherLists.length === undefined) {
     return (
       <li>
@@ -14,7 +13,6 @@ const WeatherList = ({ weatherItems }) => {
   }
   else {
     weatherLists = weatherItems.map((card) => {
-      console.log(card);
       return (
         <li key={card.date}>
           <WeatherCard mainTemp={card.mainTemp} feelsLike={card.feelsLike} maxTemp={card.maxTemp} minTemp={card.minTemp} humidity={card.humidity} detail={card.detail} description={card.description} icon={card.icon} date={card.date} city={card.city} />
