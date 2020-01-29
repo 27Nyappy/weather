@@ -6,7 +6,7 @@ export default function getWeather(time, code) {
 
   switch(time) {
     case 'weather':
-      return axios.get(`http://api.openweathermap.org/data/2.5/${time}?zip=${code},us&units=imperial&appid=${key}`)
+      return axios.get(`https://api.openweathermap.org/data/2.5/${time}?zip=${code},us&units=imperial&appid=${key}`)
         .then(res => {
           const date = Date(res.data.dt);
           const weatherObjDay = {
@@ -17,7 +17,7 @@ export default function getWeather(time, code) {
             humidity: res.data.main.humidity,
             detail: res.data.weather[0].main,
             description: res.data.weather[0].description,
-            icon: `http://openweathermap.org/img/wn/${res.data.weather[0].icon}@2x.png`,
+            icon: `https://openweathermap.org/img/wn/${res.data.weather[0].icon}@2x.png`,
             date: date,
             city: res.data.name
           };
@@ -27,7 +27,7 @@ export default function getWeather(time, code) {
           throw err;
         });
     case 'forecast':
-      return axios.get(`http://api.openweathermap.org/data/2.5/${time}?zip=${code},us&units=imperial&appid=${key}`)
+      return axios.get(`https://api.openweathermap.org/data/2.5/${time}?zip=${code},us&units=imperial&appid=${key}`)
         .then(res => {
           return res.data.list.map(({ main, weather, dt_txt }) => {
             const dates = new Date(`${dt_txt}`).toString();
