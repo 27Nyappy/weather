@@ -1,0 +1,65 @@
+.WeatherList {
+  @media only screen and (max-width: 430px) {
+    padding: 20px;
+    width: 80%;
+    height: 250px;
+  }
+
+  @media screen and (min-width: 431px) and (max-width: 600px) {
+    padding: 15px 30px;
+    width: 80%;
+    height: 260px;
+  }
+
+  @media screen and (min-width: 601px) and (max-width: 768px) {
+    padding: 15px 30px;
+    width: 80%;
+    height: 270px;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 834px) {
+    padding: 15px 50px 15px 30px;
+    width: 75%;
+    height: 280px;
+  }
+
+  @media screen and (min-width: 835px) {
+    padding: 15px 50px 15px 30px;
+    width: 70%;
+    height: 290px;
+  }
+
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  overflow-x: scroll;
+  margin: 20px auto;
+  text-align: center;
+  max-width: 600px;
+  background-color: #1d3230c1;
+  box-shadow: 0 0 3px #101414c1;
+  color: #b1d4d1;
+
+  li {
+    display: inline-block;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.WeatherList::-webkit-scrollbar {
+  width: 20px;
+}
+
+.WeatherList::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 10px;
+}
+
+.WeatherList::-webkit-scrollbar-thumb {
+  background: #b1d4d1;
+  border-radius: 10px;
+}
+
+.WeatherList::-webkit-scrollbar-thumb:hover {
+  background: #b1d4d1;
+}

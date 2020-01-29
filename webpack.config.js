@@ -1,5 +1,6 @@
 const HtmlPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -10,11 +11,15 @@ module.exports = {
   },
   devServer: {
     port: 7890,
-    historyApiFallback: true
+    historyApiFallback: true,
+    https: true
   },
   plugins: [
     new HtmlPlugin({ template: './src/index.html' }),
     new CleanWebpackPlugin(),
+    new Dotenv({
+      systemvars:true
+    }),
     new CopyPlugin([
       { from: 'public' }
     ])

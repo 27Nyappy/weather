@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Weather Component Renders Weather Component 1`] = `
+<Fragment>
+  <WeatherForm
+    handleDayChange={[Function]}
+    handleSubmit={[Function]}
+    handleZipChange={[Function]}
+  />
+  <WeatherList
+    weatherItems={Array []}
+  />
+</Fragment>
+`;

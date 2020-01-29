@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Weather List Component Renders Weather List 1`] = `
+<ul
+  className="WeatherList"
+>
+  <li
+    key="Mon Jan 27 2020 22:57:33 GMT-0800 (Pacific Standard Time)"
+  >
+    <WeatherCard
+      city="Portland"
+      date="Mon Jan 27 2020 22:57:33 GMT-0800 (Pacific Standard Time)"
+      description="moderate rain"
+      detail="Rain"
+      feelsLike={43.68}
+      humidity={81}
+      icon="http://openweathermap.org/img/wn/10n@2x.png"
+      mainTemp={50.13}
+      maxTemp={53.6}
+      minTemp={46}
+    />
+  </li>
+  <li
+    key="Mon Jan 27 2020 24:22:35 GMT-0800 (Pacific Standard Time)"
+  >
+    <WeatherCard
+      city="Portland"
+      date="Mon Jan 27 2020 24:22:35 GMT-0800 (Pacific Standard Time)"
+      description="moderate rain"
+      detail="Rain"
+      feelsLike={43.68}
+      humidity={81}
+      icon="http://openweathermap.org/img/wn/10n@2x.png"
+      mainTemp={50.13}
+      maxTemp={53.6}
+      minTemp={46}
+    />
+  </li>
+</ul>
+`;

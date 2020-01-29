@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component renders Header 1`] = `
+<header
+  className="Header"
+>
+  <div>
+    <img
+      src="/path/image"
+    />
+  </div>
+  <h1>
+    Weather Forecast
+  </h1>
+</header>
+`;
