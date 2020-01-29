@@ -4,6 +4,7 @@ import styles from './WeatherForm.css';
 
 const WeatherForm = ({ handleSubmit, handleZipChange, handleDayChange }) => {
   return (
+    // nice use of className and imported styles
     <form onSubmit={handleSubmit} className={styles.WeatherForm}>
       <section>
         <div id="zip">

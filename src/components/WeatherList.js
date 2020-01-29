@@ -4,7 +4,9 @@ import WeatherCard from './WeatherCard';
 import styles from './WeatherList.css';
 
 const WeatherList = ({ weatherItems }) => {
+  // no need to redeclare / rename the passed variable ^
   let weatherLists = weatherItems;
+  // i prefer this always be an array and check length value (should be 1 or many)
   if(weatherLists.length === undefined) {
     return (
       <li className={styles.WeatherList}>
@@ -22,6 +24,9 @@ const WeatherList = ({ weatherItems }) => {
     });
   }
 
+  // we should generally have one return statement in a component
+  // there's a bug here where the ul is only rendered on load and is removed on re-render
+  // the conditional logic placed outside these multiple returns makes it easy to overlook :)
   return (
     <ul className={styles.WeatherList}>
       {weatherLists}
@@ -29,6 +34,13 @@ const WeatherList = ({ weatherItems }) => {
   );
 };
 
+// nice use of propTypes
+// at Navis, we use a pattern of including default values
+// when destructured at the top of the component, like:
+// {
+//   weatherItems = []
+// } = props;
+// we should not use the same var for multiple data types - easily creates confusion :)
 WeatherList.propTypes = {
   weatherItems: PropTypes.oneOfType([
     PropTypes.object,

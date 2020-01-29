@@ -1,4 +1,5 @@
 .Card {
+  /* we could eliminate much of the breakpoint tweaks with the grid approach :) */
   @media only screen and (max-width: 430px) {
     width: 300px;
   }
@@ -45,6 +46,7 @@
     }
 
     span {
+      /* interesting use of 'pt' - I look forward to hearing more on this! */
       font-size: 20pt;
       font-weight: 400;
     }
