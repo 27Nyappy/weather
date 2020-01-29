@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './WeatherCard.css';
 
 const WeatherCard = ({ mainTemp, feelsLike, maxTemp, minTemp, humidity, detail, description, icon, date, city }) => {
   return (
-    <>
+    <div className={styles.Card}>
       <h2>{city}</h2>
       <p>{date}</p>
       <div>
@@ -12,7 +13,7 @@ const WeatherCard = ({ mainTemp, feelsLike, maxTemp, minTemp, humidity, detail, 
       </div>
       <p>{maxTemp}&#176;/{minTemp}&#176; Feels like {feelsLike}&#176;</p>
       <p>{detail}, {description} and {humidity}% humidity</p>
-    </>
+    </div>
   );
 };
 

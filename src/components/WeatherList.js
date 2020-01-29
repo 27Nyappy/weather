@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import WeatherCard from './WeatherCard';
+import styles from './WeatherList.css';
 
 const WeatherList = ({ weatherItems }) => {
   let weatherLists = weatherItems;
   if(weatherLists.length === undefined) {
     return (
-      <li>
+      <li className={styles.WeatherList}>
         <WeatherCard  mainTemp={weatherLists.mainTemp} feelsLike={weatherLists.feelsLike} maxTemp={weatherLists.maxTemp} minTemp={weatherLists.minTemp} humidity={weatherLists.humidity} detail={weatherLists.detail} description={weatherLists.description} icon={weatherLists.icon} date={weatherLists.date} city={weatherLists.city} />
       </li>
     );
@@ -22,7 +23,7 @@ const WeatherList = ({ weatherItems }) => {
   }
 
   return (
-    <ul>
+    <ul className={styles.WeatherList}>
       {weatherLists}
     </ul>
   );

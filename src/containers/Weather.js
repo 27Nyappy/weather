@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import WeatherForm from '../components/WeatherForm';
 import getWeather from '../services/WeatherApi';
 import WeatherList from '../components/WeatherList';
+import styles from './Weather.css';
 
 const Weather = () => {
   const [zip, updateZip] = useState('');
@@ -29,7 +30,7 @@ const Weather = () => {
     <>
       <WeatherForm handleSubmit={handleSubmit} handleDayChange={handleDayChange} handleZipChange={handleZipChange} />
       {weatherInfo !== undefined ? <WeatherList weatherItems={weatherInfo}/> : <></>}
-      {err ? <h2>PLEASE ENTER A VALID ZIP CODE</h2> : <></>}
+      {err ? <h2 className={styles.Error}>PLEASE ENTER A VALID ZIP CODE</h2> : <></>}
     </>
   );
 };

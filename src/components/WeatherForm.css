@@ -1,0 +1,88 @@
+.WeatherForm {
+  @media only screen and (max-width: 430px) {
+    padding: 20px;
+    width: 80%;
+  }
+
+  @media screen and (min-width: 431px) and (max-width: 600px) {
+    padding: 15px 30px;
+    width: 80%;
+  }
+
+  @media screen and (min-width: 601px) and (max-width: 768px) {
+    padding: 15px 30px;
+    width: 80%;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 834px) {
+    padding: 15px 50px 15px 30px;
+    width: 75%;
+  }
+
+  @media screen and (min-width: 835px) {
+    padding: 15px 50px 15px 30px;
+    width: 70%;
+  }
+
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #76dbd1;
+  box-shadow: 0 0 3px #203f3c95;
+  color: #555151;
+
+  h2 {
+    font-size: 13pt;
+  }
+
+  input[type=number] {
+    margin: 10px 0;
+    width: 200px;
+    font-size: 11pt;
+  }
+
+  input[type=radio] {
+    display: none;
+  }
+
+  input[type=radio]:checked + label {
+    color: #0c0a0a;
+  }
+
+  label:hover {
+    cursor: pointer;
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    label {
+      margin: 10px 0;
+      font-size: 11pt;
+    }
+  }
+
+  input[type=submit] {
+    box-sizing: content-box;
+    background-color: #57a99a;
+    box-shadow: 0 0 3px #57a99a;
+    color: #ecf4f3;
+    border: none;
+    width: 120px;
+    margin: 0 auto;
+    transition: 0.2s ease-in-out;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 12pt;
+  }
+
+  input[type=submit]:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: rgba(128, 128, 128, 0.616);
+    color: #57a99a;
+    background-color: #ecf4f3;
+  }
+}
