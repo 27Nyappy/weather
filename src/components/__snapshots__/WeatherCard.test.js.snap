@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Weather Card Component Renders Weather Card 1`] = `
-<Fragment>
+<div
+  className="Card"
+>
   <h2>
     Portland
   </h2>
@@ -34,5 +36,5 @@ exports[`Weather Card Component Renders Weather Card 1`] = `
     81
     % humidity
   </p>
-</Fragment>
+</div>
 `;

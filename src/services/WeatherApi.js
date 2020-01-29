@@ -39,7 +39,7 @@ export default function getWeather(time, code) {
               humidity: main.humidity,
               detail: weather[0].main,
               description: weather[0].description,
-              icon: `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`,
+              icon: `https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`,
               date: dates,
               city: res.data.city.name
             };

@@ -2,41 +2,63 @@
 
 exports[`Weather Form Component Renders Weather Form 1`] = `
 <form
+  className="WeatherForm"
   onSubmit={[Function]}
 >
-  <input
-    max="99950"
-    min="00501"
-    onChange={[Function]}
-    required={true}
-    type="number"
-  />
-  <input
-    id="current-weather"
-    name="day-options"
-    onChange={[Function]}
-    required={true}
-    type="radio"
-    value="weather"
-  />
-  <label
-    htmlFor="current-weather"
-  >
-    Current Weather
-  </label>
-  <input
-    id="five-day-weather"
-    name="day-options"
-    onChange={[Function]}
-    required={true}
-    type="radio"
-    value="forecast"
-  />
-  <label
-    htmlFor="five-day-weather"
-  >
-    Five Day Forecast
-  </label>
+  <section>
+    <div
+      id="zip"
+    >
+      <h2>
+        Please Enter Your Zip Code
+      </h2>
+      <input
+        max="99950"
+        min="00501"
+        onChange={[Function]}
+        placeholder="ZIP"
+        required={true}
+        type="number"
+      />
+    </div>
+    <div
+      id="days"
+    >
+      <h2>
+        Select Time
+      </h2>
+      <div
+        id="selections"
+      >
+        <input
+          id="current-weather"
+          name="day-options"
+          onChange={[Function]}
+          required={true}
+          type="radio"
+          value="weather"
+        />
+        <label
+          htmlFor="current-weather"
+        >
+          Current Weather
+        </label>
+        <input
+          id="five-day-weather"
+          name="day-options"
+          onChange={[Function]}
+          required={true}
+          type="radio"
+          value="forecast"
+        />
+        <label
+          htmlFor="five-day-weather"
+        >
+          Five Day Forecast
+        </label>
+      </div>
+    </div>
+  </section>
   <input
     type="submit"
     value="Get Weather"

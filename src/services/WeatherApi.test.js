@@ -30,7 +30,7 @@ describe('Gets Data', () => {
       humidity: 81,
       detail: 'Rain',
       description: 'moderate rain',
-      icon: 'http://openweathermap.org/img/wn/10n@2x.png',
+      icon: 'https://openweathermap.org/img/wn/10n@2x.png',
       date: Date(1580205765227),
       city: 'Portland'
     });

@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Weather List Component Renders Weather List 1`] = `
-<ul>
+<ul
+  className="WeatherList"
+>
   <li
     key="Mon Jan 27 2020 22:57:33 GMT-0800 (Pacific Standard Time)"
   >
