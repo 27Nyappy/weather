@@ -1,4 +1,5 @@
 .WeatherList {
+  /* I like the use of media queries - but I think we can simplify with a more flexible approach :) */
   @media only screen and (max-width: 430px) {
     padding: 20px;
     width: 80%;

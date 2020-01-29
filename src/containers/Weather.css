@@ -1,4 +1,6 @@
 .Error {
+  /* same feedback as other blocks of media queries */
+  /* also consider setting your breakpoint values as global variables :) */
   @media only screen and (max-width: 430px) {
     padding: 20px;
     width: 80%;

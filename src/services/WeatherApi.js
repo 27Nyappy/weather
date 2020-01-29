@@ -4,6 +4,9 @@ const key = process.env.WEATHER_KEY;
 
 export default function getWeather(time, code) {
 
+  // a little nitpicky, but i think the variable naming here is tad confusing
+  // like, 'weather' and 'forecast' are not really time concepts...
+  // having tight concepts helps in code review when others are trying to follow your logic
   switch(time) {
     case 'weather':
       return axios.get(`https://api.openweathermap.org/data/2.5/${time}?zip=${code},us&units=imperial&appid=${key}`)
