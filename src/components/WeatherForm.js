@@ -13,9 +13,9 @@ const WeatherForm = ({ handleSubmit, handleZipChange, handleDayChange }) => {
         <div id="days">
           <h2>Select Time</h2>
           <div id="selections">
-            <input type="radio" name="day-options" id="current-weather" onChange={handleDayChange} value="weather" required />
+            <input type="radio" name="day-options" id="current-weather" onChange={handleDayChange} value="today" required />
             <label htmlFor="current-weather">Current Weather</label>
-            <input type="radio" name="day-options" id="five-day-weather" onChange={handleDayChange} value="forecast" required />
+            <input type="radio" name="day-options" id="five-day-weather" onChange={handleDayChange} value="five-day" required />
             <label htmlFor="five-day-weather">Five Day Forecast</label>
           </div>
         </div>

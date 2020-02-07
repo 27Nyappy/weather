@@ -5,11 +5,11 @@ const key = process.env.WEATHER_KEY;
 export default function getWeather(time, code) {
 
   switch(time) {
-    case 'weather':
-      return axios.get(`https://api.openweathermap.org/data/2.5/${time}?zip=${code},us&units=imperial&appid=${key}`)
+    case 'today':
+      return axios.get(`https://api.openweathermap.org/data/2.5/weather?zip=${code},us&units=imperial&appid=${key}`)
         .then(res => {
           const date = Date(res.data.dt);
-          const weatherObjDay = {
+          const weatherObjDay = [{
             mainTemp: res.data.main.temp,
             feelsLike: res.data.main.feels_like,
             maxTemp: res.data.main.temp_max,
@@ -20,14 +20,14 @@ export default function getWeather(time, code) {
             icon: `https://openweathermap.org/img/wn/${res.data.weather[0].icon}@2x.png`,
             date: date,
             city: res.data.name
-          };
+          }];
           return weatherObjDay;
         })
         .catch(err => {
           throw err;
         });
-    case 'forecast':
-      return axios.get(`https://api.openweathermap.org/data/2.5/${time}?zip=${code},us&units=imperial&appid=${key}`)
+    case 'five-day':
+      return axios.get(`https://api.openweathermap.org/data/2.5/forecast?zip=${code},us&units=imperial&appid=${key}`)
         .then(res => {
           return res.data.list.map(({ main, weather, dt_txt }) => {
             const dates = new Date(`${dt_txt}`).toString();

@@ -21,8 +21,8 @@ describe('Gets Data', () => {
       name: 'Portland'
     }
     }));
-    const search = await getWeather('weather', 97230);
-    expect(search).toEqual({
+    const search = await getWeather('today', 97230);
+    expect(search).toEqual([{
       mainTemp: 50.13,
       feelsLike: 43.68,
       maxTemp: 53.6,
@@ -33,6 +33,6 @@ describe('Gets Data', () => {
       icon: 'https://openweathermap.org/img/wn/10n@2x.png',
       date: Date(1580205765227),
       city: 'Portland'
-    });
+    }]);
   });
 });

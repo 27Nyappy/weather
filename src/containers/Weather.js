@@ -12,7 +12,7 @@ const Weather = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    {err ? updateErr(false) : err;}
+    updateErr(false);
     getWeather(days, zip)
       .then(res => updateWeatherInfo(res))
       .catch(error => {
@@ -29,8 +29,8 @@ const Weather = () => {
   return (
     <>
       <WeatherForm handleSubmit={handleSubmit} handleDayChange={handleDayChange} handleZipChange={handleZipChange} />
-      {weatherInfo !== undefined ? <WeatherList weatherItems={weatherInfo}/> : <></>}
       {err ? <h2 className={styles.Error}>PLEASE ENTER A VALID ZIP CODE</h2> : <></>}
+      {weatherInfo !== undefined ? <WeatherList weatherItems={weatherInfo}/> : <></>}
     </>
   );
 };

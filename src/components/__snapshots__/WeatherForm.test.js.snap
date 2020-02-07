@@ -36,7 +36,7 @@ exports[`Weather Form Component Renders Weather Form 1`] = `
           onChange={[Function]}
           required={true}
           type="radio"
-          value="weather"
+          value="today"
         />
         <label
           htmlFor="current-weather"
@@ -49,7 +49,7 @@ exports[`Weather Form Component Renders Weather Form 1`] = `
           onChange={[Function]}
           required={true}
           type="radio"
-          value="forecast"
+          value="five-day"
         />
         <label
           htmlFor="five-day-weather"
